@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>itprofit</title>
+</head>
+<body>
+    <h1 class="title">Форма</h1>
+
+    <form id="form" class="form">
+        <label class="form--label">
+            <span>Имя</span>
+            <input id="firstName" autocomplete="given-name" type="text">
+            <span class="form--error_msg"></span>
+        </label>
+
+        <label class="form--label">
+            <span>E-mail</span>
+            <input id="email" autocomplete="email" type="email">
+            <span class="form--error_msg"></span>
+        </label>
+
+        <label class="form--label">
+            <span>Телефон</span>
+            <input id="tel" autocomplete="tel" type="tel">
+            <span class="form--error_msg"></span>
+        </label>
+
+        <label class="form--label">
+            <span>Сообщение</span>
+            <textarea id="message" class="form--textarea"></textarea>
+            <span class="form--error_msg"></span>
+        </label>
+
+        <div class="form--actions">
+            <button class="form--reset" type="button" id="open-reset-dialog">
+                Сброс            
+            </button>
+
+            <button class="form--submit" type="submit">
+                Отправить
+            </button>
+        </div>
+    </form>
+
+    <dialog id="dialog" class="dialog">
+        <h4>Подтвердите очистку формы</h4>
+
+        <form class="form" method="dialog" id="dialog_form">
+            <div class="form--actions">
+                <button autofocus type="submit" class="form--cancel">
+                    Отмена
+                </button>
+
+                <button type="submit" class="form--reset" id="reset">
+                    Очистить
+                </button>
+            </div>
+        </form>
+    </dialog>
+</body>
+</html>

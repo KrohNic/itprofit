@@ -10,7 +10,7 @@ module.exports = (env, options) => {
     mode: isProduction ? 'production' : 'development',
     devtool: isProduction ? false : 'source-map',
     watch: !isProduction,
-    entry: ['./src/index.ts'],
+    entry: ['./src/front/index.ts'],
     output: {
       filename: '[name].[contenthash].js',
       path: isProduction
@@ -82,8 +82,7 @@ module.exports = (env, options) => {
     plugins: [
       new HTMLWebpackPlugin({
         filename: 'index.html',
-        template: './src/index.html',
-        // favicon: './src/assets/ico/favicon.ico',
+        template: './src/front/index.html',
       }),
       new CleanWebpackPlugin(),
       new MiniCssExtractPlugin({

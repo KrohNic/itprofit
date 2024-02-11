@@ -1,3 +1,4 @@
+import IMask from 'imask';
 import './styles/index.scss';
 
 interface IField {
@@ -13,6 +14,13 @@ document.body.onload = async () => {
   const openResetDialog = document.querySelector(
     '#open-reset-dialog'
   ) as HTMLFormElement;
+
+  const element = document.querySelector('#tel');
+  const maskOptions = {
+    mask: '+{375} (00) 000-00-00'
+  };
+  const mask = IMask(element, maskOptions);
+
 
   const requiredValidator = (el: HTMLFormElement) => {
     if (el.value) return null;
